@@ -113,6 +113,8 @@ while 1:  # or ture
     # Snake body mechanism
     snakeBody.insert(0, list(snakePos))
     if snakePos[0] == foodPos[0] and snakePos[1] == foodPos[1]:
+        # sound = pygame.mixer.Sound('beep.wav')
+        # sound.play(0)
         pygame.mixer.music.load('beep.mp3')
         pygame.mixer.music.play(0)
         score += 1
@@ -132,7 +134,7 @@ while 1:  # or ture
 
     # Bound
     if snakePos[0] > 710 or snakePos[0] < 0:
-        gameOver()
+        gameover()
     if snakePos[1] > 450 or snakePos[1] < 0:
         gameover()
 
